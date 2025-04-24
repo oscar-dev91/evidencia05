@@ -1,33 +1,295 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparativa: Git Local vs GitHub</title>
+  <style>
+    :root {
+      --primary-color: #0d1117;
+      --secondary-color: #2ea043;
+      --text-color: #333;
+      --light-bg: #f6f8fa;
+      --border-color: #d0d7de;
+      --header-bg: #24292f;
+      --hover-color: #f0f6fc;
+    }
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    body {
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-bottom: 2rem;
+    }
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .intro {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .comparison-table th {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: left;
+      padding: 1rem;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background-color: var(--light-bg);
+    }
+
+    .comparison-table tr:hover {
+      background-color: var(--hover-color);
+    }
+
+    .feature-name {
+      font-weight: 600;
+    }
+
+    .emoji-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .benefits-container {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .benefit-box {
+      flex: 1;
+      padding: 1.5rem;
+      background-color: var(--light-bg);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefit-box h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .benefit-box ul {
+      padding-left: 1.5rem;
+    }
+
+    .benefit-box li {
+      margin-bottom: 0.5rem;
+    }
+
+    .conclusion {
+      background-color: var(--light-bg);
+      padding: 1.5rem;
+      border-radius: 5px;
+      border-left: 4px solid var(--secondary-color);
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefits-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
+<header>
+  <div class="logo-container">
+    <span>🧑‍💻</span> <span>🌐</span>
+  </div>
+  <h1>Git Local vs GitHub</h1>
+  <p>Comparativa de repositorios locales y remotos</p>
+</header>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+<div class="container">
+  <div class="intro">
+    <h2>Sistemas de Control de Versiones</h2>
+    <p>Git es un sistema de control de versiones distribuido diseñado para manejar proyectos de cualquier tamaño con velocidad y eficiencia. GitHub es una plataforma basada en la nube que aloja repositorios Git y añade funcionalidades adicionales para la colaboración en equipo.</p>
+  </div>
 
+  <table class="comparison-table">
+    <thead>
+    <tr>
+      <th>Característica</th>
+      <th>Git Local</th>
+      <th>GitHub (Remoto)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🌟</span>Disponibilidad</td>
+      <td>Solo disponible en tu máquina local. Requiere acceso físico al dispositivo con el repositorio.</td>
+      <td>Disponible en la nube. Accesible desde cualquier dispositivo con conexión a internet.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">👥</span>Colaboración</td>
+      <td>Limitada. Los cambios no son visibles para otros a menos que se compartan manualmente.</td>
+      <td>Excelente. Múltiples desarrolladores pueden trabajar en el mismo proyecto simultáneamente.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🔄</span>Sincronización</td>
+      <td>Requiere comandos explícitos (push/pull) para sincronizar con repositorios remotos.</td>
+      <td>Facilita la sincronización entre equipos y provee interfaces visuales para manejar conflictos.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🔒</span>Seguridad</td>
+      <td>Depende de la seguridad de tu máquina local. Sin punto único de fallo externo.</td>
+      <td>Ofrece autenticación, autorización y cifrado. Riesgo de exposición si las credenciales se comprometen.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">📈</span>Escalabilidad</td>
+      <td>Limitada por el espacio en disco y recursos de tu máquina.</td>
+      <td>Alta escalabilidad. Puede manejar proyectos muy grandes con muchos colaboradores.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🔍</span>Visibilidad</td>
+      <td>Solo visible para ti localmente. No hay exposición pública por defecto.</td>
+      <td>Puede ser público (visible para todos) o privado (acceso controlado).</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🔌</span>Dependencia de Internet</td>
+      <td>No requiere conexión a internet para operaciones básicas.</td>
+      <td>Requiere conexión a internet para la mayoría de las operaciones.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🛠️</span>Herramientas Adicionales</td>
+      <td>Interfaz de línea de comandos principalmente. Herramientas GUI opcionales.</td>
+      <td>Interfaz web completa, CI/CD, gestión de problemas, solicitudes de pull, wikis, páginas web, etc.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">📊</span>Seguimiento de Problemas</td>
+      <td>No incluido. Requiere herramientas externas.</td>
+      <td>Sistema de seguimiento de problemas integrado con etiquetas, asignaciones y hitos.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">🧪</span>CI/CD</td>
+      <td>Requiere configuración manual con herramientas externas.</td>
+      <td>GitHub Actions integrado para automatizar flujos de trabajo.</td>
+    </tr>
+    <tr>
+      <td class="feature-name"><span class="emoji-icon">💾</span>Respaldo</td>
+      <td>Requiere estrategias manuales de respaldo.</td>
+      <td>Respaldo automático en servidores distribuidos.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="benefits-container">
+    <div class="benefit-box">
+      <h3><span class="emoji-icon">📁</span>Ventajas de Git Local</h3>
+      <ul>
+        <li>Operaciones más rápidas (no depende de la velocidad de internet)</li>
+        <li>Funciona sin conexión a internet</li>
+        <li>Control total sobre tu repositorio</li>
+        <li>No hay riesgo de exposición en línea</li>
+        <li>Sin límites impuestos por proveedores externos</li>
+        <li>Mayor privacidad para código sensible</li>
+        <li>No requiere cuenta en servicios externos</li>
+      </ul>
+    </div>
+
+    <div class="benefit-box">
+      <h3><span class="emoji-icon">☁️</span>Ventajas de GitHub</h3>
+      <ul>
+        <li>Facilita la colaboración en equipo</li>
+        <li>Sirve como copia de seguridad externa</li>
+        <li>Proporciona visibilidad y exposición a proyectos públicos</li>
+        <li>Incluye herramientas para revisión de código</li>
+        <li>Facilita la contribución a proyectos de código abierto</li>
+        <li>Integración con herramientas de CI/CD</li>
+        <li>Sirve como portafolio para desarrolladores</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="conclusion">
+    <h3><span class="emoji-icon">💡</span>Conclusión</h3>
+    <p>Git local y GitHub son complementarios, no excluyentes. La mayoría de los desarrolladores utilizan ambos: Git para operaciones locales rápidas y GitHub para colaboración y respaldo. La elección entre usar solo Git local o incorporar GitHub depende principalmente de las necesidades de colaboración, visibilidad y seguridad de cada proyecto.</p>
+    <p>Para proyectos individuales pequeños, Git local puede ser suficiente. Para proyectos en equipo o código que deseas compartir, GitHub ofrece ventajas significativas.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 | Guía comparativa de Git y GitHub | <span class="emoji-icon">📧</span> contacto@ejemplo.com</p>
+</footer>
 </body>
-
 </html>
