@@ -27,7 +27,7 @@ Brindar una herramienta visual e informativa que permita entender las diferencia
 
 1. Clona el repositorio:
   ```bash
-  git clone https://github.com/tuusuario/git-vs-github-comparativa.git
+  git clone https://github.com/oscar-dev91/evidencia05.git
   ```
 2. Abre el archivo `index.html` en tu navegador.
 3. Explora la comparativa e interactúa con los elementos visuales.
