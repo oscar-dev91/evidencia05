@@ -13,6 +13,8 @@
       --border-color: #d0d7de;
       --header-bg: #24292f;
       --hover-color: #f0f6fc;
+      --hover-bg: #ddf4ff;
+      --hover-border: #0969da;
     }
 
     * {
@@ -99,14 +101,19 @@
     .comparison-table td {
       padding: 1rem;
       border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
     }
 
     .comparison-table tr:nth-child(even) {
       background-color: var(--light-bg);
     }
 
-    .comparison-table tr:hover {
-      background-color: var(--hover-color);
+    /* Mejorado: Efecto hover más visible e interactivo */
+    .comparison-table tr:hover td {
+      background-color: var(--hover-bg);
+      box-shadow: inset 0 0 0 1px var(--hover-border);
+      transform: translateY(-2px);
+      color: var(--primary-color);
     }
 
     .feature-name {
@@ -117,6 +124,12 @@
       font-size: 1.5rem;
       margin-right: 0.5rem;
       vertical-align: middle;
+    }
+
+    /* Animación para emojis en hover */
+    .comparison-table tr:hover .emoji-icon {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
     }
 
     .benefits-container {
@@ -131,6 +144,12 @@
       background-color: var(--light-bg);
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 
     .benefit-box h3 {
@@ -153,6 +172,12 @@
       border-radius: 5px;
       border-left: 4px solid var(--secondary-color);
       margin-top: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .conclusion:hover {
+      box-shadow: 0 5px 15px rgba(46, 160, 67, 0.2);
+      transform: translateY(-3px);
     }
 
     footer {
